@@ -1,0 +1,28 @@
+
+h1 {
+  color: red;
+  font: 100;
+  font-family: monospace;
+}
+body {
+  color: blue;
+  font: 70;
+  font-family: monospace;
+  padding: 0px;
+  margin: 0px;
+}
+header {
+    background-color: grey;
+    padding: 20px;
+}
+section {
+    background-color: rgb(240, 188, 214);
+    margin: 20px;
+    flex-direction: row;
+}
+
+div {
+    background-color: rgb(133, 9, 50);
+    display: inline;
+    margin: auto;
+}
