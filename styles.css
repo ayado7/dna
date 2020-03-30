@@ -5,7 +5,7 @@ h1 {
   font-family: monospace;
 }
 body {
-  color: blue;
+  color: rgb(0, 0, 0);
   font: 70;
   font-family: monospace;
   padding: 0px;
@@ -13,16 +13,35 @@ body {
 }
 header {
     background-color: grey;
-    padding: 20px;
+    padding: 5px;
 }
 section {
-    background-color: rgb(240, 188, 214);
+    background-color: rgb(255, 255, 255);
     margin: 20px;
+    flex-direction: row;
+    display: flex;
     flex-direction: row;
 }
 
 div {
-    background-color: rgb(133, 9, 50);
-    display: inline;
+    background-color: rgb(209, 37, 94);
+    display: inline-block;
+    width: 150px;
+    height: 150px;
     margin: auto;
+}
+
+ul {
+  margin: auto;
+  padding: auto;
+  list-style-type: none;
+  text-decoration: none;
+}
+ul:hover{
+  text-decoration: underline;
+}
+
+li {
+  display: inline-block;
+  margin: 20px;
 }
