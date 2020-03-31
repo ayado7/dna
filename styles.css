@@ -16,32 +16,72 @@ header {
     padding: 5px;
 }
 section {
+    position: relative;
     background-color: rgb(255, 255, 255);
     margin: 20px;
     flex-direction: row;
     display: flex;
     flex-direction: row;
 }
-
+.submit {
+  place-self: center;
+  color: blue;
+  width: 30px;
+  text-align: center;
+  position: sticky;
+}
 div {
     background-color: rgb(209, 37, 94);
     display: inline-block;
     width: 150px;
     height: 150px;
     margin: auto;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+p.text {
+  position: sticky;
+  width: 500px;
+  height: 50px;
+  align-self: center;
+  background-color: lightseagreen;
+}
+p.submit {
+  position: sticky;
+  width: 200px;
+  height: 50px;
+  align-self: center;
+  background-color: rgb(255, 0, 0);
 }
 
+div.container {
+  color: antiquewhite;
+  width: 500px;
+  place-self: center;
+  height: auto;
+  flex-direction: column;
+  display: flex;
+  margin: auto;
+  background-color: blueviolet;
+}
 ul {
   margin: auto;
   padding: auto;
   list-style-type: none;
   text-decoration: none;
 }
-ul:hover{
+li:hover{
   text-decoration: underline;
+  background-color: blanchedalmond;
 }
 
 li {
   display: inline-block;
-  margin: 20px;
+  padding: 10px;
+}
+li:first-child {
+  margin-left: 0px;
 }
