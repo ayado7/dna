@@ -1,6 +1,10 @@
-// this is a stub. meaning it implements all functions the server will offer in a simplified way so you can test without the server
-// stubs usually return test data only. Don't make it sophisticated!
-// when your server changes you will just substitute the include of "server_stub" for another file (e.g., server.js) that defines the same functions. So none of your other code has to change
+/* this is a stub. meaning it implements all functions the server will offer in a simplified way so you can test without the server
+* stubs usually return test data only. Don't make it sophisticated!
+* when your server changes you will just substitute the include of "server_stub" for another file (e.g., server.js) that defines the same functions. So none of your other code has to change
+* Authors: 
+*      Frank Trollmann: Initial setup of the file and creation of initial stub functions.
+*      Aya Douba:
+*/
 
 // authenticate
 // we assume two test users: Aya and Frank, with password "Test1234"

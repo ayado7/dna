@@ -1,3 +1,10 @@
+/* 
+* This file contains dummy data that can be used to test without a server connection.
+* Authors: 
+*      Frank Trollmann: Initial setup of the file and creation of initial dummy data
+*      Aya Douba:
+*/
+
 
 var postCounter = 5;
 
