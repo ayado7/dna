@@ -1,23 +1,55 @@
-alert("Hello World"); //popup
 
-let age = 28 //let allows reassignment
-const age = 30 //const doesn't allow. Use it mostly
-
-const string =(`my name is ${age}`)//to insert value into sting
-//listJSON = JSON.stringify(list) <--to send to the server
-
-
-/*
-For +1 likes
-<i class="add-like"></i> <a href="#" onclick="AddValue()">0</a>
-
-<script>
-var startingNumber = 0;
-
-function AddValue()
-{
-   startingNumber++;
-   $(this).text(startingNumber);
+function register(username, password) { 
+   return true
+   
 }
 
-</script>*/
+
+var test= [
+   {
+      username: "Tester",
+      password: "pass",
+   },
+
+   {
+      username: "TesterTwo",
+      password: "passtwo",
+   },
+
+   {
+      username: "TesterThree",
+      password: "passthree",
+   }
+]
+
+function authenticate(username, password) 
+{
+   document.getElementById("sign-in").onclick;
+
+   for (i=0; i<test.length; i++)
+   {
+      if (username==test[i].username && password==test[i].password)
+      { 
+        console.log (username+'is here!') 
+        
+      }
+      else 
+      { console.log ("wrong password") 
+      
+      }
+   }
+}
+
+
+
+function addPost(userID, input, timeStamp) {
+   new_post = {}
+   new_post.post_id = postCounter++;
+
+   // TODO: fill in any other information you want to (and don't forget to add attributes to this function!)
+   all_posts[all_posts.length] = new_post;
+
+//function newPost ()
+
+//function getAllPosts ()
+

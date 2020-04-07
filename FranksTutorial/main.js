@@ -7,6 +7,6 @@ function buttonClicked() {
 
 function pageLoaded() {
     //window.alert("page has loaded");
-    document.getElementById("button").innerHTML = "Click me pleeeeease!";
+    document.getElementById("sign-in").innerHTML = "Click me pleeeeease!";
     authenticate("Aya","asdasd");
 }

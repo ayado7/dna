@@ -1,1 +1,1 @@
-This is a solo project
+This is a not-so-solo project

@@ -80,6 +80,42 @@ orange FFE7C9
 green C9F4FB
 yellow FFFAC9 */
 
+.moderate {
+  visibility: hidden;
+}
+
+.comment-area {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  padding: 12px 20px;
+  text-overflow: initial;
+  box-sizing: border-box;
+  border: 2px solid #DBC9E9;
+  border-radius: 2px;
+  background-color: #f8f8f8;
+  resize: none;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.Comment{
+  width: 100px;
+  height: 30px;
+  margin-top: 3px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #FFFAC9;
+  color: black;
+  font-weight: bold;
+  resize: none;
+  float: left;
+}
+
 
 div.test {
   width: 200px;

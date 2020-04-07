@@ -30,7 +30,7 @@ Profile page:
 
 Post page:
 - Load post by ID
-- Load post properties (?)
+- Load post properties (???)
 
 
 
@@ -38,5 +38,67 @@ Functions:
 - Load main page
 - Show sign-up dialoge
 - Authenticate information 
-- Save input 
+- Save input in Database
 - 
+
+Sign-up process:
+- Get input
+- If EmailID is within the DB -> error (your email exists, try sign-in)
+- If PassID is >8 length -> error (password is too short)
+- If submit is successful -> create userID, add to Database
+
+Sign-in process:
+- Get input
+- Loop overdatabase to Authenticate
+- If username (or) password don't match any UserID -> Error, try again
+- If username + password belong to the same UserID -> Log-in successful -> go to home page, view as UserID
+
+Load all posts:
+- Get post from Database by postID
+- Place post within Div (???)
+- 
+
+New post process:
+- Show dialoge if "submit" button is pressed & text length > 0
+- Save input into Database with UserID & assign postID to it, create Time stamp
+- Place post within Div 
+- Create new post page (???)
+(Could we ignore the post page and create a post dialoge instead? / If we were to ignore comments, we won't need a post page anymore)
+
+Additional functions:
+- +1 when user presses like button (only works once)
+
+
+
+
+
+
+
+
+
+
+
+Just notes:
+/*alert("Hello World"); //popup
+
+let age = 28 //let allows reassignment
+const age = 30 //const doesn't allow. Use it mostly
+
+const string =(`my name is ${age}`)//to insert value into sting
+//listJSON = JSON.stringify(list) <--to send to the server
+
+
+
+For +1 likes
+<i class="add-like"></i> <a href="#" onclick="AddValue()">0</a>
+
+<script>
+var startingNumber = 0;
+
+function AddValue()
+{
+   startingNumber++;
+   $(this).text(startingNumber);
+}
+
+</script>*/

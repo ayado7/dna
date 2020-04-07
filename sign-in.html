@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
   <link 
   rel="stylesheet"
@@ -13,7 +14,7 @@
 </head>
   <body>
 
-        <form action="sign-up" style="border: 1px solid black">
+        <form action="sign-up" >
         <div class="container">
 
             <label for="email"><b>Email Address</b></label>
@@ -22,11 +23,12 @@
             <label for="password"><b>Password</b></label>
             <input type="password" placeholder="Enter a password" name="password" required>
        
-               
-            <button type="button" class="sign-in"><a href= "index.html">Sign In</a></button>
+            <button type="button" id="sign-in" onclick="authenticate()">Sign In</button>
+            <!-- <button type="button" class="sign-in"><a href= "index.html">Sign In</a></button> -->
             <button type="button" class="cancel">Cancel</button>                  
 
         </div>
-        </form> 
+        </form>
+        <script type="text/javascript" src = "logic.js"></script>
         </body>
         </html>
