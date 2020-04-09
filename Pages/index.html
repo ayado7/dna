@@ -5,7 +5,7 @@
   <link 
   rel="stylesheet"
   type="text/css"
-  href= "styles.css"/>
+  href= "..\styles.css">
 
   <meta charset="UTF-8">
   <meta name="viewport" conent="width=device-width">
@@ -26,10 +26,10 @@
     </nav>
     </header>
 
-    <form>
-      <input class="textarea" type="text" name="Story" placeholder="Submit your story">
-      <button class="submit" type="submit">Submit</button> 
-      <dialog open class="moderate">
+    <div class="inputField">
+      <input id="userStory" class="textarea" type="text" name="Story" placeholder="Submit your story">
+      <button class="submit" type="submit" onclick="newPost()" value="submit" >Submit</button> 
+      <dialog id="invisible" open class="invisible">
         <p method="dialog">
           Thank you!
          <br>Please allow our moderators a moment to check and approve your post.
@@ -38,7 +38,7 @@
              <button href="index.html"> Home </button> 
      
       </dialog>
-    </form>
+    </div>
 
 
 <section>
@@ -112,6 +112,9 @@
   </div>  
 </section>
 
-<script type="text/javascript" src = "logic.js"></script>
-  </body>
+<script type="text/javascript" src = "../z-FranksTutorial/simulated_Data.js"></script>
+<script type="text/javascript" src = "../z-FranksTutorial/server_stub.js"></script>
+<script type="text/javascript" src = "../Code/logic.js"></script>
+<script type="text/javascript" src = "../Code/var.js"></script>
+</body>
 </html>

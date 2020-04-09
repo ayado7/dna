@@ -39,7 +39,6 @@ Functions:
 - Show sign-up dialoge
 - Authenticate information 
 - Save input in Database
-- 
 
 Sign-up process:
 - Get input
@@ -67,38 +66,3 @@ New post process:
 
 Additional functions:
 - +1 when user presses like button (only works once)
-
-
-
-
-
-
-
-
-
-
-
-Just notes:
-/*alert("Hello World"); //popup
-
-let age = 28 //let allows reassignment
-const age = 30 //const doesn't allow. Use it mostly
-
-const string =(`my name is ${age}`)//to insert value into sting
-//listJSON = JSON.stringify(list) <--to send to the server
-
-
-
-For +1 likes
-<i class="add-like"></i> <a href="#" onclick="AddValue()">0</a>
-
-<script>
-var startingNumber = 0;
-
-function AddValue()
-{
-   startingNumber++;
-   $(this).text(startingNumber);
-}
-
-</script>*/

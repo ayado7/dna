@@ -63,9 +63,10 @@ function getPost(postId) {
 }
 
 // add post
-function addPost() {
-    new_post = {}
+function server_stub_addPost(text) {
+    new_post = {};
     new_post.post_id = postCounter++;
+    new_post.text = text;
 
     // TODO: fill in any other information you want to (and don't forget to add attributes to this function!)
     all_posts[all_posts.length] = new_post;
