@@ -1,4 +1,4 @@
-var test= [
+var allUsers= [
     {
        userName: "Tester",
        password: "pass",
@@ -18,7 +18,7 @@ var test= [
     }
  ]
 
- var posts= [
+ var allPosts= [
      {
          userId: "1",
          input: "Story Text",
@@ -31,11 +31,12 @@ var test= [
         postId: "12",
         counter: "0",
      },
- ]
-
- var counter=[
      {
-
-         counter: "0",
-     }
+        userId: "1",
+        input: "Third Story Text",
+        postId: "13",
+        counter: "0",
+    },
+    
  ]
+
