@@ -1,7 +1,7 @@
 ## simple demo script for showing how to connect to an sqlite DB 
 # from Python, and run a simple SQL query 
 # This is basically Adams sample file just adapted to the DB I was playing around with.
-
+print ("Hello World")
 # import the python library for SQLite 
 import sqlite3
 
