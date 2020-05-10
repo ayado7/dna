@@ -3,26 +3,32 @@
 //This function takes inputs from the user and stores them into the database then allows the user in.
 function register(userName, password) 
 { 
+   var userName = document.getElementById("email").value;
+   var password = document.getElementById ("password").value;
    document.getElementById("sign-up").onclick;
    // > call server 
    console.log ("You are registered")
 }
 
 
-
 //This function takes inputs from user and checks them against the DB information, if there is a match the user is allowed in, if not, the user can try again.
 function authenticate(userName, password) 
 {
-   document.getElementById("sign-in").onclick;
-
-   for (i=0; i<test.length; i++)
+   for (let i=0; i< allUsers.length; i++)
    {
+      var userName = document.getElementById("email").value;
+      var password = document.getElementById ("password").value;
       if (userName==allUsers[i].userName && password==allUsers[i].password)
+      {
+         authenticate == True
+      }
       { 
-        console.log (userName+'is here!') 
+         document.getElementById ("sign-in") = logged_in
+        console.log (userName+' is here!');
+        window.user = allUsers[i];
       }
       else 
-      { console.log ("wrong password") 
+         { console.log ("wrong password") 
       }
    }
 }
@@ -36,22 +42,44 @@ function loadMain (postId) {
 //function loadPosts () {}
 
 
-//function addPost(userId, input) {
-  // new_post = {}
-   //new_post.post_id = postCounter++;
-   // all_posts[all_posts.length] = new_post;}
 
 
 //This function adds a post, saves it, shows the moderation dialoge
 function newPost () {
    // get data from UI
    var storyContent = document.getElementById("userStory").value;
+
+   const payLoad = {
+      storyContent,
+      userId: window.user ? window.user.id : null,
+      postId: Date.now(),
+   }
    // call server 
-   server_stub_addPost(storyContent);
-   // updateUI
-   document.getElementById("invisible").classList.remove("invisible");
-   console.log ("got your message")
+   sendPost(payLoad);
 }
+
+//Read more about XMLHttpRequest
+function sendPost () {
+   let xhr = new XMLHttpRequest();
+   xhr.open("POST", "http://127.0.0.1:5000/api/posts");
+   // define what to do when the response comes back
+   xhr.onerror = function (error) {
+      console.log('ERROR! ', error)
+   }
+   xhr.onload = function () {
+      console.log('Saved!')
+      document.getElementById("invisible").classList.remove("invisible");
+   }
+
+   //send the request, and when it comes back, run the code above.
+   xhr.send(sendPost);
+}
+// Server needs to process this in Flask
+// create new child element in the container 
+// How do you create a card for each post
+// How do you delete a card?
+// How do you remove it from the DOM? 
+// 
 
 // This function returns the post, places it in a div in the main page
 function publish () {
@@ -80,5 +108,12 @@ function postPage (postId)
       {
           return allPosts[index]
       }
+   }
+}
+
+function windowOnload() {
+   window.onload = function (authenticate, newPost) {
+      document.getElementById("sign-in").onclick = authenticate();
+      document.getElementById("submit_button").onclick = newPost();
    }
 }

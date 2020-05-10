@@ -1,23 +1,33 @@
 
 import sqlite3
-import mainDB.db
 
 # setup DB connection
 db_connection = sqlite3.connect('mainDB.db')
 db_cursor = db_connection.cursor()
 
+# add new user
+def newUser():
+    db_cursor.execute ("INSERT INTO users VALUES () ")
+
+# Get user by name for autheticate 
+ 
+
+# then check for password match 
+
 # main page: Get all posts 
 def get_all_posts():
     db_cursor.execute("SELECT * from posts")
-    return db_cursor.fetchall()
+    result = db_curser.fetchall()
+    db_connection.close()
+    return result
 
 # Profile page: Get all posts from one user
 def get_all_user_posts():
-    db_cursor.execute("SELECT * from posts WHERE userId = '1' ")
+    db_cursor.execute("SELECT * from posts WHERE userId = {}".format(userId))
     return db_cursor.fetchall()
 
 """# method to get a student for a specific class with a specific name
-def get_students_for_class(class_name):
+def get_posts_for_user(class_name):
 
     query = "SELECT Student.id, Student.name, Student.email "
     query +=    "FROM "
