@@ -54,3 +54,4 @@ def get_students_for_class(class_name):
     db_connection.close()
     return result
 
+print ("hi")

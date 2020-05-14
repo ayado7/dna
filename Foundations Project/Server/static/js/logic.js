@@ -1,14 +1,22 @@
 
 
 //This function takes inputs from the user and stores them into the database then allows the user in.
-function register(userName, password) 
-{ 
+function register(userName, password){
+   var registered = " ";
    var userName = document.getElementById("email").value;
    var password = document.getElementById ("password").value;
-   document.getElementById("sign-up").onclick;
-   // > call server 
-   console.log ("You are registered")
+   document.getElementById("sign-up");
+   while (userName && password != 0)
+   {
+      /////Put it in the DB
+      document.getElementById ("sign-up").isConnected;
+      /////Allow user in! (only if the feilds are filled)
+      registered += window.location.href = "\index.html"
+      break
+   }
+   return registered
 }
+
 
 
 //This function takes inputs from user and checks them against the DB information, if there is a match the user is allowed in, if not, the user can try again.
@@ -16,35 +24,38 @@ function authenticate(userName, password)
 {
    for (let i=0; i< allUsers.length; i++)
    {
-      var userName = document.getElementById("email").value;
-      var password = document.getElementById ("password").value;
+   var outcome = " ";
+   var userName = document.getElementById("email").value;
+   var password = document.getElementById ("password").value;
+   //Find a safer way than sending all info over the inetersnet! 
       if (userName==allUsers[i].userName && password==allUsers[i].password)
-      {
-         authenticate == True
-      }
       { 
-         document.getElementById ("sign-in") = logged_in
-        console.log (userName+' is here!');
-        window.user = allUsers[i];
-      }
-      else 
-         { console.log ("wrong password") 
+         document.getElementById ("sign-in");
+         console.log (userName+' is here!');
+         window.user = allUsers[i];
+/////Allow user in! (only if the feilds are filled correctly)
+         outcome += window.location.href = "\index.html"
+         break
+      } else
+      { 
+         outcome += alert("Wrong password, please try again");
+         console.log ('wrong password');
+         window.location.reload ();
+         break
       }
    }
-}
+   return outcome;
+} 
+
 
 //This function loads all the content of the mainpage when a user visits the website
 function loadMain (postId) {
- // > call server (get all posts by postId)
+ // get all posts by postId from the database
+
 }
 
-//This function loads all posts and updates them when a user visits the website (is it repetitive?)
-//function loadPosts () {}
 
-
-
-
-//This function adds a post, saves it, shows the moderation dialoge
+//Get input from User
 function newPost () {
    // get data from UI
    var storyContent = document.getElementById("userStory").value;
@@ -58,7 +69,7 @@ function newPost () {
    sendPost(payLoad);
 }
 
-//Read more about XMLHttpRequest
+//Send user input to Server
 function sendPost () {
    let xhr = new XMLHttpRequest();
    xhr.open("POST", "http://127.0.0.1:5000/api/posts");
@@ -70,10 +81,11 @@ function sendPost () {
       console.log('Saved!')
       document.getElementById("invisible").classList.remove("invisible");
    }
-
    //send the request, and when it comes back, run the code above.
    xhr.send(sendPost);
 }
+
+
 // Server needs to process this in Flask
 // create new child element in the container 
 // How do you create a card for each post
@@ -81,11 +93,11 @@ function sendPost () {
 // How do you remove it from the DOM? 
 // 
 
-// This function returns the post, places it in a div in the main page
+// retreve user input from DB with its properties and place within Div
 function publish () {
-   // get data from UI
-   // call server 
-   // updateUI
+   
+   // Return post with properties
+   // Place within Div
 }
 
 // This function takes userId and returns all posts made by the same user to the profile page.
