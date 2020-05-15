@@ -1,20 +1,29 @@
 
 
 //This function takes inputs from the user and stores them into the database then allows the user in.
-function register(userName, password){
-   var registered = " ";
+function register(){
    var userName = document.getElementById("email").value;
    var password = document.getElementById ("password").value;
-   document.getElementById("sign-up");
-   while (userName && password != 0)
+   if (userName && password != 0)
    {
       /////Put it in the DB
-      document.getElementById ("sign-up").isConnected;
+      let xhr = new XMLHttpRequest();
+      xhr.responseType = "json";
+      xhr.open("POST", "http://127.0.0.1:5000/api/signup");
+      // define what to do when the response comes back
+      xhr.onload = function () {
+         
+      //   window.location.href = "STATIC\index.html"
+         console.log ("response! " + xhr.response)
+      }
+      console.log ("It's getting sent!")
+      //send the request, and when it comes back, run the code above.
+      xhr.send("userName="+userName+"&password="+password);
+      console.log ("userName="+userName+"&password="+password);
       /////Allow user in! (only if the feilds are filled)
-      registered += window.location.href = "\index.html"
-      break
+      
    }
-   return registered
+   
 }
 
 

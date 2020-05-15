@@ -8,14 +8,13 @@ db_connection = sqlite3.connect('mainDB.db')
 db_cursor = db_connection.cursor()
 
 # add new user
-def newUser(userName, password, userId):
-    db_connection = sqlite3.connect('mainDB.db')
+def newUser(userName, password):
+    db_connection = sqlite3.connect('Server/db/mainDB.db')
     db_cursor = db_connection.cursor()
-    db_cursor.execute ("INSERT INTO users (userName, password, userId) VALUES (?,?,?)",
-    email, password, random())
+    db_cursor.execute ('INSERT INTO users (userName, password) VALUES ("{}","{}")'.format(userName, password))
     
-db_connection.commit()
-db_connection.close()
+    db_connection.commit()
+    db_connection.close()
 
 
 # main page: Get all posts 
