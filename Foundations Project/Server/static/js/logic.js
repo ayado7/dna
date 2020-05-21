@@ -13,7 +13,7 @@ function register(){
       // define what to do when the response comes back
       xhr.onload = function () {
          
-      //   window.location.href = "STATIC\index.html"
+      window.location.href = "static/html/index.html"
          console.log ("response! " + xhr.response)
       }
       console.log ("It's getting sent!")
@@ -65,21 +65,43 @@ function loadMain (postId) {
 
 
 //Get input from User
-function newPost () {
+function newPost() {
    // get data from UI
-   var storyContent = document.getElementById("userStory").value;
-
-   const payLoad = {
-      storyContent,
-      userId: window.user ? window.user.id : null,
-      postId: Date.now(),
+   var payLoad = document.getElementById("userStory").value;
+   if (payLoad != 0)
+   {
+      let xhr = new XMLHttpRequest();
+      xhr.responseType = "json";
+      xhr.open("POST", "http://127.0.0.1:5000/api/posts");
+      // define what to do when the response comes back
+      xhr.onerror = function (error) {
+      console.log('ERROR! ', error)
+      }
+      xhr.onload = function () {
+         console.dir(xhr.response)
+         console.log('Saved!', payLoad)
+      }
+      //const payLoad = {
+         //storyContent;
+         //userId: window.user ? window.user.id : null;
+         //postId: Date.now();
+      xhr.send(payLoad);
+      console.log ("story="+payLoad);
+      }
+      // call server 
+      //sendPost(payLoad);
+}
+function displayHide () {
+   var x = document.getElementById ("invisible");
+   if (x.style.display === "none") {
+      x.style.display = "block";
+   } else {
+      x.style.display = "none";
    }
-   // call server 
-   sendPost(payLoad);
 }
 
 //Send user input to Server
-function sendPost () {
+/*function sendPost (payLoad) {
    let xhr = new XMLHttpRequest();
    xhr.open("POST", "http://127.0.0.1:5000/api/posts");
    // define what to do when the response comes back
@@ -87,14 +109,37 @@ function sendPost () {
       console.log('ERROR! ', error)
    }
    xhr.onload = function () {
+      console.dir(xhr.response)
       console.log('Saved!')
-      document.getElementById("invisible").classList.remove("invisible");
+      //renderNewPost(payLoad)
+      //document.getElementById("invisible").classList.remove("invisible");
    }
    //send the request, and when it comes back, run the code above.
-   xhr.send(sendPost);
+   xhr.send(payLoad);
+   console.log ("user story is"+payLoad);
 }
+*/
+/*
+function output() {
 
+   let y=document.getElementById("userStory").value
+   document.write(y);
+   return y;
+} 
 
+function createNewPost (NewBox) {
+   newBox.forEach(postObject){
+      let postBox = document.createElement ("div");
+      let postBody = document.createElement ("div");
+      body.innerText = payLoad.storyContent;
+      return postBox;
+   }
+}
+function renderNewPost (NewBox){
+   let postBox = createNewPost (NewBox);
+   document.getElementById ("postBox").prepend(postBox);
+}
+ */
 // Server needs to process this in Flask
 // create new child element in the container 
 // How do you create a card for each post
@@ -102,12 +147,6 @@ function sendPost () {
 // How do you remove it from the DOM? 
 // 
 
-// retreve user input from DB with its properties and place within Div
-function publish () {
-   
-   // Return post with properties
-   // Place within Div
-}
 
 // This function takes userId and returns all posts made by the same user to the profile page.
 function userPosts () 
@@ -134,6 +173,7 @@ function postPage (postId)
 
 function windowOnload() {
    window.onload = function (authenticate, newPost) {
+      document.getElementById("sign-up").onclick = register();
       document.getElementById("sign-in").onclick = authenticate();
       document.getElementById("submit_button").onclick = newPost();
    }

@@ -16,6 +16,14 @@ def newUser(userName, password):
     db_connection.commit()
     db_connection.close()
 
+# add new post
+def newPost(storyContent):
+    db_connection = sqlite3.connect('Server/db/mainDB.db')
+    db_cursor = db_connection.cursor()
+    db_cursor.execute ('INSERT INTO posts (input, userId) VALUES ("{}","1")'.format(storyContent))
+    
+    db_connection.commit()
+    db_connection.close()
 
 # main page: Get all posts 
 def get_all_posts():
