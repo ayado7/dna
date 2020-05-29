@@ -11,7 +11,7 @@
   <meta name="viewport" conent="width=device-width">
   <title>Did Not Ask</title>
 </head>
-  <body>
+  <body onload= "loadMain()">
 
     <header>
     <nav>
@@ -20,16 +20,17 @@
         <li>Support & Donate</li>
         <li>About Us</li>
         <li>FAQ</li>
-        <li><a href= "profile.html">Profile</a> </li>
-        <li><a href = "sign-in.html"> Sign-in</a></li>
+        <li><a href= "/profile">Profile</a> </li>
+        <li><a href = "/sign-in"> Sign-in</a></li>
+        <li><a href = "/sign-up"> Sign-up</a></li>
       </ul>
     </nav>
     </header>
 
-    <div id= "inputField" class="inputField">
-      <input id="userStory" class="textarea" type="text" name="Story" placeholder="Submit your story">
-      <button class="submit" type="submit" id="submit_button" onclick= "newPost()" value="submit" >Submit</button> 
-      <dialog id="invisible" open class="invisible">
+    <div class= "inputField" class="inputField">
+      <input id="story-content" class="textarea" type="text" name="Story" placeholder="Submit your story">
+      <button  type="submit" class="submit submit_button" onclick="newPost()" value="submit" >Submit</button> 
+    <!--  <dialog class="invisible" open class="invisible">
         <p method="dialog">
           Thank you!
          <br>Please allow our moderators a moment to check and approve your post.
@@ -38,80 +39,13 @@
              <button href="index.html"> Home </button> 
      
       </dialog>
+    -->
     </div>
 
 
-<section id= "postBox">
-  <div id= "post" class="test">
-    <div id="story"> Spoiled majestic by gosh proudly and on some much struck until crud kookaburra far much much before that horse frugally on garrulous and overate so overheard some the gosh thus complete more one. Nutria because the out courageously globefish far wherever hazy however sprang ouch before victorious more before innocently the scorpion yikes gosh this far uneasily perceptible winked hey jeepers some dolorous static oh the ouch dizzily in the far painfully krill.</div>
-    <div id="share">Share</div>
-    <div id="like">Like</div>
-    <a id="post-page"href="post.html">
-      <div id="comment">Comment</div>
-    </a>
-  </div>  
+<section id="posts" class="postBox">
 
-  <div class="test">
-    <div id="top"> again </div>
-    <div id="right">Share</div>
-    <div id="left">Like</div>
-    <div id="center">Comment</div>
-  </div>  
-
-  <div class="test">
-    <div id="top"> and again </div>
-    <div id="right">Share</div>
-    <div id="left">Like</div>
-    <div id="center">Comment</div>
-  </div>  
 </section>
-
-<section>
-  <div class="test">
-    <div id="top"> Spoiled majestic by gosh proudly and on some much struck until crud kookaburra far much much before that horse frugally on garrulous and overate so overheard some the gosh thus complete more one. Nutria because the out courageously globefish far wherever hazy however sprang ouch before victorious more before innocently the scorpion yikes gosh this far uneasily perceptible winked hey jeepers some dolorous static oh the ouch dizzily in the far painfully krill.</div>
-    <div id="right">Share</div>
-    <div id="left">Like</div>
-    <div id="center">Comment</div>
-  </div>  
-
-  <div class="test">
-    <div id="top"> again </div>
-    <div id="right">Share</div>
-    <div id="left">Like</div>
-    <div id="center">Comment</div>
-  </div>  
-
-  <div class="test">
-    <div id="top"> and again </div>
-    <div id="right">Share</div>
-    <div id="left">Like</div>
-    <div id="center">Comment</div>
-  </div>  
-</section>
-
-<section>
-  <div class="test">
-    <div id="top"> Spoiled majestic by gosh proudly and on some much struck until crud kookaburra far much much before that horse frugally on garrulous and overate so overheard some the gosh thus complete more one. Nutria because the out courageously globefish far wherever hazy however sprang ouch before victorious more before innocently the scorpion yikes gosh this far uneasily perceptible winked hey jeepers some dolorous static oh the ouch dizzily in the far painfully krill.</div>
-    <div id="right">Share</div>
-    <div id="left">Like</div>
-    <div id="center">Comment</div>
-  </div>  
-
-  <div class="test">
-    <div id="top"> again </div>
-    <div id="right">Share</div>
-    <div id="left">Like</div>
-    <div id="center">Comment</div>
-  </div>  
-
-  <div class="test">
-    <div id="top"> and again </div>
-    <div id="right">Share</div>
-    <div id="left">Like</div>
-    <div id="center">Comment</div>
-  </div>  
-</section>
-
 
 <script type="text/javascript" src = "static\js\logic.js"></script>
 <script type="text/javascript" src = "static\js\var.js"></script> 

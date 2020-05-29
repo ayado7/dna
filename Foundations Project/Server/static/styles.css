@@ -1,4 +1,12 @@
 
+/* colors Template
+Pink FDC9C9
+blue C9EFCB
+purple DBC9E9
+orange FFE7C9
+green C9F4FB
+yellow FFFAC9 */
+
 h1 {
   color: red;
   font: 100;
@@ -25,16 +33,6 @@ section {
     display: flex;
     flex-direction: row;
 }
-/*form {
-  display: inline-block;
-  height: 30px;
-  width: 100%;
-  align-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 2px black;
-  border-radius: 4px;
-} */
 
 .textarea {
   width: 100%;
@@ -72,15 +70,6 @@ div {
   align-items: center;
 }
 
-/* colors Template
-Pink FDC9C9
-blue C9EFCB
-purple DBC9E9
-orange FFE7C9
-green C9F4FB
-yellow FFFAC9 */
-
-
 .invisible {
   visibility: hidden;
 }
@@ -117,15 +106,21 @@ yellow FFFAC9 */
   float: left;
 }
 
-
-div.test {
+div.post {
   width: 200px;
   height: 200px;
   background-color: white;
   display: inline-block;
   margin: auto;
 }
-#top {
+/*div.test {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  display: inline-block;
+  margin: auto;
+} */
+.story {
   width: 200px;
   height:160px;
   background-color: #C9EFCB;
@@ -134,25 +129,29 @@ div.test {
   overflow-x: hidden;
   overflow-y: visible;
 }
-#right {
+
+
+.share {
   float: right;
   background-color: #FDC9C9;
   width: 50px;
   padding: 3px;
   text-align-last: center;
 }
-#left {
+
+.like {
   float: left;
   background-color:#FFFAC9;
   width: 50px;
   padding: 3px;
   text-align-last: center;
 }
-#center {
+
+.comment {
   float: center;
   background-color: #DBC9E9;
   align-content: center;
-  width: auto;
+  width: 50px;
   padding: 3px;
   text-align-last: center;
 }
@@ -214,21 +213,6 @@ button {
   background-color: white;
   color: black;
   cursor: pointer;}
-  
-
-
-/* #sidenav {
-  height: 100%;
-  width: 160px;
-  position: absolute;
-  display: inline-block;
-  z-index: 1;
-  top: 0;
-  left: -20px;
-  background-color: rgb(186, 240, 237);
-  overflow-x: hidden;
-  padding-top: 20px;
-}*/
 
 p.text {
   position: sticky;
